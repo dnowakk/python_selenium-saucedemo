@@ -30,7 +30,41 @@ def test_add_item_to_cart(logged_in):
     checkout = driver.find_element(By.CSS_SELECTOR, ".btn_action.checkout_button")
     checkout.click()
 
+    #Wypełnij formularz i zatwierdź
+    name = driver.find_element(By.ID, "first-name")
+    name.send_keys("John")
+
+    surname = driver.find_element(By.ID, "last-name")
+    surname.send_keys("Smith")
+
+    poastal = driver.find_element(By.ID, "postal-code")
+    poastal.send_keys("EC2Y")
+
+    conti = driver.find_element(By.CSS_SELECTOR, ".btn_primary.cart_button")
+    conti.click()
+    driver.implicitly_wait(3)
+
+    #Checkout
+    summary = driver.find_element(By.CSS_SELECTOR, ".summary_info")
+    summary_text = summary.text.strip()
+    filtered_lines = [
+    line for line in summary_text.splitlines()
+    if line.strip() not in ["CANCEL", "FINISH", "FREE PONY EXPRESS DELIVERY!"]
+]
+    cleaned_summary = "\n".join(filtered_lines)
+    print(cleaned_summary)
+
+    finish = driver.find_element(By.CSS_SELECTOR, ".btn_action.cart_button")
+    finish.click()
+
+    message = driver.find_element(By.CSS_SELECTOR, ".complete-header")
+    final_message = message.text.strip()
+    print("Has your order been placed: " + final_message)
+
+    
+    
     driver.save_screenshot("add_to_cart_result.png")
+
     
    
     
