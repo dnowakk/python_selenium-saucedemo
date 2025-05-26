@@ -1,6 +1,5 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 import pytest
@@ -8,7 +7,7 @@ import time
 from selenium.webdriver.support.ui import Select
 
 
-def test_add_item_to_cart(logged_in):
+def test_sort_by_price(logged_in):
     driver = logged_in
     driver.implicitly_wait(8)
 
@@ -36,5 +35,5 @@ def test_add_item_to_cart(logged_in):
 
     driver.implicitly_wait(3)
     
-    driver.save_screenshot("sort_items_by_price.png")
+    driver.save_screenshot('Screenshots/4_sort_items_by_price.png')
  

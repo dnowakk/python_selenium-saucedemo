@@ -7,7 +7,7 @@ import pytest
 import time
 
 
-
+#Odwołanie do conftest.py
 def test_add_item_to_cart(logged_in):
     driver = logged_in
 
@@ -63,7 +63,7 @@ def test_add_item_to_cart(logged_in):
 
     
     
-    driver.save_screenshot("add_to_cart_result.png")
+    driver.save_screenshot('Screenshots/1_add_to_cart_result.png')
 
     
    
