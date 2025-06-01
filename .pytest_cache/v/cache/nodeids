@@ -1,0 +1,15 @@
+[
+  "test_1_Add_item_to_cart.py::test_add_item_to_cart",
+  "test_2_Delete_item_from_cart.py::test_add_item_to_cart",
+  "test_2_Delete_item_from_cart.py::test_delete_items",
+  "test_2_Sort_items_by_price.py::test_add_item_to_cart",
+  "test_2_sort_items_by_price.py::test_add_item_to_cart",
+  "test_3_.py::test_add_item_to_cart",
+  "test_3_Check_if_sorting_correct.py::test_sorting_low_to_high",
+  "test_3_Open_product.py::test_add_item_to_cart",
+  "test_3_Open_product.py::test_open_product",
+  "test_4_Sort_items_by_price.py::test_add_item_to_cart",
+  "test_4_Sort_items_by_price.py::test_sort_by_price",
+  "test_5_Add_all_items_to_cart_assert.py::test_delete_items",
+  "test_6_Logout.py::test_logout"
+]
